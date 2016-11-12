@@ -1,0 +1,39 @@
+form {
+  text-align: center;
+}
+
+.input {
+  padding-top: 300px;
+  border: 0px solid;
+  height: 120px;
+  width: 1000px;
+  font-size:120px;
+  text-align: center;
+  font-family: 'Bungee Shade', cursive;
+}
+
+.button {
+  color: black;
+  font-size: 20px;
+  font-family: 'Lekton', sans-serif;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 20px;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  background-color: white;
+  padding: 4px 30px;
+}
+
+.button:hover {
+  color: white;
+  background-color: black;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+}
+
+*:focus {
+    outline: none;
+}
