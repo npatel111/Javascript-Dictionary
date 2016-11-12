@@ -55,6 +55,8 @@ $( "#clickme" ).click(function() {
     opacity: 0.25,
     left: "+=50",
     width: "toggle"
-  }, 5000, function() {
+  }, 3000, function() {
   });
 });
+
+$('.button').raptorize();
