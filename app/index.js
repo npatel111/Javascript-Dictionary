@@ -2,7 +2,11 @@ $(function(){
   $('form').on('submit', function(){
     event.preventDefault()
     let word = $('#word').val()
+    let gif = $('#word').val()
+    new Definition(word)
+    new Gif(gif)
     getDefinition(word)
+    getGif(gif)
   })
 })
 
@@ -19,5 +23,6 @@ function getDefinition(word) {
 }
 
 function displayDefinition(response) {
-  response.list[0].definition//gives definition
+  definition = response.list[0].definition//gives definition
+  document.getElementById('#definition').append(definition)
 }
