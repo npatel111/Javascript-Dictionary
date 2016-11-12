@@ -2,6 +2,9 @@ form {
   text-align: center;
 }
 
+#container {
+  columns: 2
+}
 .input {
   padding-top: 200px;
   border: 0px solid;
@@ -13,12 +16,20 @@ form {
 }
 
 #search {
-  font-size:50px;
+  font-size:100px;
   font-family: 'Bungee Shade', cursive;
+  margin: 0 auto;
+  width: 100px;
+  text-align: right
 }
 
 #display {
-  padding-right: 40px;
+  /*padding-right: 40px;*/
+  column-width: calc(100%/3)
+  padding: 40px;
+  padding-top: 150px;
+  align-content: right
+
 }
 
 #definition {
@@ -27,13 +38,18 @@ form {
   float: left;
   display: table-cell;
   vertical-align: baseline;
-  width: calc(100%/3)
+}
+
+#gif {
+  padding: 40px;
+  padding-top: 400px;
+
 }
 
 img {
   position: relative;
   float: right;
-  width:  800px;
+  width:  550px;
   max-height: 525px;
   border: 0px solid;
   border-color: #454545;
