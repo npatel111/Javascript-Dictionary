@@ -1,7 +1,12 @@
+$(function() {
+  $('#clickme').hide()
+});
+
 $(function(){
   $('form').on('submit', function(){
     event.preventDefault()
     $('form').hide()
+    $('#clickme').show()
     createWord($('#word').val())
     createGif($('#word').val())
   })
@@ -50,6 +55,8 @@ function displayGif(response) {
   $('#gif').append(`<img src="${firstgif.images.original.url}" />`)//shows gif
 }
 
+$('.button').raptorize();
+
 $( "#clickme" ).click(function() {
   $( "#container" ).animate({
     opacity: 0.25,
@@ -58,5 +65,3 @@ $( "#clickme" ).click(function() {
   }, 3000, function() {
   });
 });
-
-$('.button').raptorize();
