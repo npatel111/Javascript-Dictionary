@@ -1,6 +1,7 @@
 $(function(){
   $('form').on('submit', function(){
     event.preventDefault()
+    $('form').hide()
     createWord($('#word').val())
     createGif($('#word').val())
   })
@@ -11,7 +12,7 @@ function getDefinition(word) {
   method: "GET",
   url: `https://mashape-community-urban-dictionary.p.mashape.com/define?term=${word}`,
   beforeSend: function(xhr) {
-  xhr.setRequestHeader("X-Mashape-Authorization", "0Pj9sD3WmEmshc4ksOMtS4dyEOGIp1aNbr3jsnrxphIFkVMYVh"); // Enter here your Mashape key
+  xhr.setRequestHeader("X-Mashape-Authorization", "0Pj9sD3WmEmshc4ksOMtS4dyEOGIp1aNbr3jsnrxphIFkVMYVh");
   }
   }).done(function (response) {
     displayDefinition(response)
@@ -19,9 +20,9 @@ function getDefinition(word) {
 }
 
 function displayDefinition(response) {
-  word.definition = response.list[0].definition//gives definition
+  word.definition = response.list[0].definition
   word.example = response.list[0].example
-  $('#definition').append(`<ul><li>${word.definition}</li><br><li>${word.example}</li></ul>`)//gives definition
+  $('#definition').append(`<ul><li>${word.definition}</li><br><li>${word.example}</li></ul>`)
 }
 
 function getGif(word) {
@@ -36,5 +37,4 @@ function getGif(word) {
 function displayGif(response) {
   gif.url = response.data[0].images.original.url
   $('#gif').append(`<img src="${gif.url}" />`)//shows gif
-
 }
