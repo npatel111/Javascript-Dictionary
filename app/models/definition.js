@@ -1,4 +1,3 @@
-
 class Definition {
   constructor(definition){
     this.definition = definition

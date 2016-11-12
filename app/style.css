@@ -12,22 +12,32 @@ form {
   font-family: 'Bungee Shade', cursive;
 }
 
+#search {
+  font-size:50px;
+  font-family: 'Bungee Shade', cursive;
+}
+
+#display {
+  padding-right: 40px;
+}
+
 #definition {
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
+  float: left;
+  display: table-cell;
+  vertical-align: baseline;
+  width: calc(100%/3)
 }
 
 img {
   position: relative;
-  padding-left: 40px;
   float: right;
-  width:  1000px;
+  width:  800px;
   max-height: 525px;
-  border: 5px solid;
+  border: 0px solid;
   border-color: #454545;
-  /*background-position: 50% 50%;
-  background-repeat:   no-repeat;
-  background-size:     cover;*/
+  border-radius: 25px;
 }
 
 ul {

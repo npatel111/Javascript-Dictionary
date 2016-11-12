@@ -7,6 +7,10 @@ $(function(){
   })
 })
 
+function displayWord(word) {
+  $('#search').append(`${word}`)
+}
+
 function getDefinition(word) {
   $.ajax({
   method: "GET",
@@ -23,7 +27,6 @@ function displayDefinition(response) {
   // word.definition = response.list[0].definition
   // word.example = response.list[0].example
   // $('#definition').append(`<ul><li>${word.definition}</li><br><li>${word.example}</li></ul>`)
-
   let firstdef = response.list[0]
   store.words[store.words.length-1].definition = firstdef.definition //stores definition
   store.words[store.words.length-1].example = firstdef.example //stores example
@@ -42,8 +45,16 @@ function getGif(word) {
 function displayGif(response) {
   // gif.url = response.data[0].images.original.url
   // $('#gif').append(`<img src="${gif.url}" />`)//shows gif
-
   let firstgif = response.data[0]
   store.gifs[store.gifs.length-1].url = firstgif.images.original.url //stores gif url
   $('#gif').append(`<img src="${firstgif.images.original.url}" />`)//shows gif
 }
+
+$( "#clickme" ).click(function() {
+  $( "#container" ).animate({
+    opacity: 0.25,
+    left: "+=50",
+    width: "toggle"
+  }, 5000, function() {
+  });
+});
