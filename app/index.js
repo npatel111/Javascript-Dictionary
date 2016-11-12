@@ -62,6 +62,6 @@ $( "#clickme" ).click(function() {
     opacity: 0.25,
     left: "+=50",
     width: "toggle"
-  }, 3000, function() {
+  }, 2000, function() {
   });
 });
