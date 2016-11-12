@@ -20,9 +20,14 @@ function getDefinition(word) {
 }
 
 function displayDefinition(response) {
-  word.definition = response.list[0].definition
-  word.example = response.list[0].example
-  $('#definition').append(`<ul><li>${word.definition}</li><br><li>${word.example}</li></ul>`)
+  // word.definition = response.list[0].definition
+  // word.example = response.list[0].example
+  // $('#definition').append(`<ul><li>${word.definition}</li><br><li>${word.example}</li></ul>`)
+
+  let firstdef = response.list[0]
+  store.words[store.words.length-1].definition = firstdef.definition //stores definition
+  store.words[store.words.length-1].example = firstdef.example //stores example
+  $('#definition').append(`<ul><li>${firstdef.definition}</li><br><li>${firstdef.example}</li></ul>`) //gives definition
 }
 
 function getGif(word) {
@@ -35,6 +40,10 @@ function getGif(word) {
 }
 
 function displayGif(response) {
-  gif.url = response.data[0].images.original.url
-  $('#gif').append(`<img src="${gif.url}" />`)//shows gif
+  // gif.url = response.data[0].images.original.url
+  // $('#gif').append(`<img src="${gif.url}" />`)//shows gif
+
+  let firstgif = response.data[0]
+  store.gifs[store.gifs.length-1].url = firstgif.images.original.url //stores gif url
+  $('#gif').append(`<img src="${firstgif.images.original.url}" />`)//shows gif
 }
