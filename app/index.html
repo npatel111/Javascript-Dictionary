@@ -11,19 +11,24 @@
 
   </head>
   <body>
-    <form>
-      <input class="input" type="text" id= "word" autofocus><br><br>
-      <input class="submit" type="submit" name="submit" value= "s e a r c h">
-    </form>
+    <div id="parent">
+      <form>
+        <input class="input" type="text" id= "word" autocomplete="off" autofocus><br><br>
+        <input class="submit" type="submit" name="submit" value= "s e a r c h">
+      </form>
+    </div>
     <nav id="nav">
       <button class="button" id="clickme">button</button>
     </nav>
-    <div id="container">
+    <div class="grid">
       <div id="display">
-        <span id="search"></span>
-        <span id="definition"></span>
+        <div id="search"></div>
+        <div id="definition"></div>
       </div>
-      <div id="gif"></div>
+      <div id="gifcontainer">
+        <div id="gif"></div>
+      </div>
+
     </div>
 
     <script src= "controllers/createDefinition.js"></script>
