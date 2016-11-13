@@ -1,1 +1,1 @@
-let store = {words: [], gifs: []}
+let store = {words: [], gifs: [], rhymes: []}
