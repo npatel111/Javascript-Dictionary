@@ -15,32 +15,44 @@ form {
 
 
 #display {
+  position: absolute;
   width: 33.33%;
   height: 500px;
   /*line-height: 500px;*/
   /*padding: 40px;*/
-  float: left;
+  /*float: left;*/
   padding-left: 40px;
   padding-top: 100px;
+  clear:both;
 
 }
 
 #definition {
+  /*position: relative;*/
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
-  float: left;
-  vertical-align: middle;
+  /*float: right;*/
+  right: 0;
+  text-align: right;
+  /*vertical-align: middle;*/
+  clear: both;
+  top: auto;
 }
 
 #search {
+  /*position: absolute; /*would right align it */
+  position: relative;
   font-size:100px;
   font-family: 'Bungee Shade', cursive;
-  float: left;
+  /*float: right;*/
   text-align: right;
+  /*align-items: flex-end;*/
+  right: 0;
   width: 70%;
   vertical-align: middle;
-
+  clear: both;
 }
+
 #gifcontainer {
   width: 66.66%;
   height: 500px;
