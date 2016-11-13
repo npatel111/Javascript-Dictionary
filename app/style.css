@@ -31,7 +31,7 @@ form {
   /*position: relative;*/
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
-  /*float: right;*/
+  float: right;
   right: 0;
   text-align: right;
   /*vertical-align: middle;*/
@@ -40,7 +40,7 @@ form {
 }
 
 #search {
-  /*position: absolute; /*would right align it */
+  position: absolute; /*would right align it */
   position: relative;
   font-size:100px;
   font-family: 'Bungee Shade', cursive;
@@ -48,7 +48,7 @@ form {
   text-align: right;
   /*align-items: flex-end;*/
   right: 0;
-  width: 70%;
+  width: 33.33%;
   vertical-align: middle;
   clear: both;
 }

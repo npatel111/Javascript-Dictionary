@@ -58,10 +58,10 @@ function displayGif(response) {
 $('.button').raptorize();
 
 $( "#clickme" ).click(function() {
-  $( "#container" ).animate({
+  $( ".container" ).animate({
     opacity: 0.25,
     left: "+=50",
     width: "toggle"
-  }, 2000, function() {
+  }, 1000, function() {
   });
 });
