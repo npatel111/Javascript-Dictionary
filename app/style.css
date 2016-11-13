@@ -16,6 +16,8 @@ form {
 
 #display {
   width: 33.33%;
+  height: 500px;
+  /*line-height: 500px;*/
   /*padding: 40px;*/
   float: left;
   padding-left: 40px;
@@ -39,34 +41,49 @@ form {
 
 }
 #gifcontainer {
-  height: 500px;
-  line-height: 500px;
-  float: right;
   width: 66.66%;
+  height: 500px;
+  float: right;
+  line-height: 500px;
   padding-right: 40px;
   padding-top: 100px;
+  vertical-align: middle;
+  position: absolute;
+  /*top: 50%;*/
+  transform: translateX(25%);
+  /*display: inline-block;*/
 
 
 }
 
 #gif {
   /*padding-top: 100px*/
-  width: 70%;
+  /*width: 70%;*/
   float: right;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   /*margin-left: 50px;*/
-  /*transform: translate(20%, -50%);*/
+  /*transform: translate(-10%, 50%);*/
+/*margin-top: auto;*/
+/*padding-bottom: 80%;*/
+/*position: relative;
+top: 50%;*/
+transform: translateY(-10%, -50%);
+}
 
 img {
-  position: absolute;
+  /*position: absolute;*/
   /*transform: translate(-10%, -50%);*/
+  float: right;
   width:  500px;
   max-height: 525px;
   border: 0px solid;
   border-color: #454545;
   border-radius: 25px;
-  float: right;
-  vertical-align: middle
+
+  vertical-align: middle;
+  /*padding-bottom: 40%;*/
+
+
   /*align-self: center;*/
 }
 
