@@ -31,7 +31,7 @@ form {
 }
 
 #gif {
-  padding-right: 40px;
+  /*padding-right: 40px;*/
   padding-top: 100px;
   /*float: right;*/
   /*margin-left: 50px;*/
@@ -46,7 +46,7 @@ img {
   border-color: #454545;
   border-radius: 25px;
   /*vertical-align: middle;*/
-  align-self: center;
+  /*align-self: center;*/
 }
 
 ul {
