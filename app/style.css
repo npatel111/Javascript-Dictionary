@@ -35,7 +35,8 @@ form {
 #search {
   font-size:100px;
   font-family: 'Bungee Shade', cursive;
-  float: right;
+  float: left;
+  text-align: right;
   width: 70%;
   vertical-align: middle;
 
@@ -50,7 +51,7 @@ form {
   vertical-align: middle;
   position: absolute;
   /*top: 50%;*/
-  transform: translateX(25%);
+  transform: translateX(30%);
   /*display: inline-block;*/
 
 
@@ -67,7 +68,7 @@ form {
 /*padding-bottom: 80%;*/
 /*position: relative;
 top: 50%;*/
-transform: translateY(-10%, -50%);
+transform: translateY(0%, -50%);
 }
 
 img {
