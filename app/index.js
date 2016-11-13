@@ -13,7 +13,7 @@ $(function(){
 })
 
 function displayWord(word) {
-  $('#search').append(`${word}`)
+  $('#search').append(`${word}<br>`)
 }
 
 function getDefinition(word) {
@@ -35,7 +35,7 @@ function displayDefinition(response) {
   let firstdef = response.list[0]
   store.words[store.words.length-1].definition = firstdef.definition //stores definition
   store.words[store.words.length-1].example = firstdef.example //stores example
-  $('#definition').append(`<ul><li>${firstdef.definition}</li><br><li>${firstdef.example}</li></ul>`) //gives definition
+  $('#definition').append(`${firstdef.definition}<br><br>${firstdef.example}<br>`) //gives definition
 }
 
 function getGif(word) {

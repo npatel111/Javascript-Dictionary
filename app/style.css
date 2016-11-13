@@ -21,36 +21,38 @@ form {
   /*line-height: 500px;*/
   /*padding: 40px;*/
   /*float: left;*/
-  padding-left: 40px;
-  padding-top: 100px;
+  float: right;
+  padding-left: 180px;
+  padding-top: 60px;
   clear:both;
 
 }
 
 #definition {
-  /*position: relative;*/
+  position: relative;
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
-  float: right;
+  /*float: right;*/
   right: 0;
   text-align: right;
-  /*vertical-align: middle;*/
+  /*vertical-align: right;*/
   clear: both;
-  top: auto;
+  /*top: auto;*/
 }
 
 #search {
-  position: absolute; /*would right align it */
+  /*position: absolute; /*would right align it */*/
   position: relative;
   font-size:100px;
   font-family: 'Bungee Shade', cursive;
   /*float: right;*/
-  text-align: right;
+  /*text-align: right;*/
   /*align-items: flex-end;*/
-  right: 0;
-  width: 33.33%;
-  vertical-align: middle;
+  right: auto;
+  /*width: 33.33%;*/
+  /*vertical-align: middle;*/
   clear: both;
+  z-index: 1
 }
 
 #gifcontainer {
@@ -58,15 +60,15 @@ form {
   height: 500px;
   float: right;
   line-height: 500px;
-  padding-right: 40px;
-  padding-top: 100px;
-  vertical-align: middle;
+  padding-right: 70px;
+  padding-top: 140px;
+  /*vertical-align: middle;*/
   position: absolute;
   /*top: 50%;*/
   transform: translateX(30%);
+  z-index: -1;
+
   /*display: inline-block;*/
-
-
 }
 
 #gif {
@@ -81,6 +83,8 @@ form {
 /*position: relative;
 top: 50%;*/
 transform: translateY(0%, -50%);
+/*z-index: -1;*/
+
 }
 
 img {
@@ -94,15 +98,16 @@ img {
   border-radius: 25px;
 
   vertical-align: middle;
+  /*z-index: -1;*/
   /*padding-bottom: 40%;*/
 
 
   /*align-self: center;*/
 }
 
-ul {
+/*ul {
   list-style-type: none;
-}
+}*/
 
 .submit {
   color: black;
