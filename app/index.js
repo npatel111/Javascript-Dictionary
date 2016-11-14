@@ -104,7 +104,7 @@ function getDefinition(word) {
 function displayDefinition(response) {
   let firstdef = response.list[0]
   if (!firstdef){
-    $('#definition').append("'This word is too weird - Niti Patel'")
+    $('#definition').append("")
   }else {
     $('#definition').append(`${firstdef.definition}<br><br>${firstdef.example}`)
   }
