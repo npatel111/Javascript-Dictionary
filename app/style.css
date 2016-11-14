@@ -180,6 +180,8 @@ ul {
 
 #anotherGif {
   color: white;
+  /*float: bottom;
+  padding-top: 800px;*/
   font-size: 20px;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
