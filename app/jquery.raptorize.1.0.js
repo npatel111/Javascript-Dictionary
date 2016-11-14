@@ -23,7 +23,7 @@
         return this.each(function() {
 
 			var _this = $(this);
-			var audioSupported = false;
+			var audioSupported = true;
 			//Stupid Browser Checking which should be in jQuery Support
 			// if ($.browser.mozilla && $.browser.version.substr(0, 5) >= "1.9.2" || $.browser.webkit) {
 			// 	audioSupported = true;
