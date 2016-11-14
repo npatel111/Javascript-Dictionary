@@ -1,5 +1,5 @@
 function createWord(input){
-  let word = new Word($('#word').val())
+  let word = new Word(input)
   getDefinition(word)
   displayWord(word.word)
   $('.container #definition').empty()
