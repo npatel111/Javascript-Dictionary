@@ -1,8 +1,51 @@
-$(function() {
+// (function () {
+//   $('#clickme').hide()
+// }())
+
+$(function() { // on document ready
+  // newForm()
   $('#clickme').hide()
+  // tasksController = new tasksController();
+  // tasksController.init();
 });
 
-$(function(){
+// // listsController.prototype.init = function () {
+// //   this.$addTaskForm.hide()
+// // }
+
+// function newForm() {
+//   $('form').on('submit', function(){
+//     event.preventDefault()
+//     $('form').hide()
+//     $('#clickme').show()
+//     createWord($('#word').val())
+//     createGif($('#word').val())
+//     // createDefinition($('#word').val())
+//   })
+// }
+
+// // function anotherForm() {
+// //   $('form').on('submit', function(){
+// //     event.preventDefault()
+// //     $('form').show()
+// //     $('#clickme').hide()
+// //     createWord($('#word').val())
+// //     createGif($('#word').val())
+// //     // createDefinition($('#word').val())
+// //   })
+// // }
+
+$(function (){
+  $('#random').on('click', function(){
+    event.preventDefault()
+    $('form').hide()
+    $('#clickme').show()
+    randomWord()
+    // createDefinition($('#word').val())
+  })
+})
+
+$(function (){
   $('form').on('submit', function(){
     event.preventDefault()
     $('form').hide()
@@ -12,6 +55,22 @@ $(function(){
     // createDefinition($('#word').val())
   })
 })
+
+function randomWord() {
+  let requestStr = "http://randomword.setgetgo.com/get.php";
+
+  $.ajax({
+    type: "GET",
+    url: requestStr,
+    dataType: "jsonp",
+    jsonpCallback: 'RandomWordComplete'
+  }).done(function (response) {
+    createWord(response.Word)
+    createGif(response.Word)
+    // debugger
+  })
+}
+
 
 function displayWord(word) {
   $('#search').append(`${word}`)
@@ -25,8 +84,6 @@ function getDefinition(word) {
   xhr.setRequestHeader("X-Mashape-Authorization", "0Pj9sD3WmEmshc4ksOMtS4dyEOGIp1aNbr3jsnrxphIFkVMYVh");
   }
   }).done(function (response) {
-    debugger
-    // let definition = createDefinition(response.list[0])
     let definition = new Definition(response.list[0].definition)
     word.definition = definition
     word.example = response.list[0].example
@@ -35,13 +92,7 @@ function getDefinition(word) {
 }
 
 function displayDefinition(response) {
-  // word.definition = response.list[0].definition
-  // word.example = response.list[0].example
-  // $('#definition').append(`<ul><li>${word.definition}</li><br><li>${word.example}</li></ul>`)
   let firstdef = response.list[0]
-  // createDefinition(firstdef.definition)
-  // store.words[store.words.length-1].definition = firstdef.definition //stores definition
-  // store.words[store.words.length-1].example = firstdef.example //stores example
   $('#definition').append(`<ul><li>${firstdef.definition}</li><br><li>${firstdef.example}</li></ul>`) //gives definition
 }
 
@@ -58,28 +109,16 @@ function displayGif(response) {
   // gif.url = response.data[0].images.original.url
   // $('#gif').append(`<img src="${gif.url}" />`)//shows gif
   let firstgif = response.data[0]
-  store.gifs[store.gifs.length-1].url = firstgif.images.original.url //stores gif url
-  $('#gif').append(`<img src="${firstgif.images.original.url}" />`)//shows gif
-}
-
-function getRhyme(word){
-  $.ajax({
-  method: "GET",
-  url: `https://wordsapiv1.p.mashape.com/words/${word}/rhymes`,
-  beforeSend: function(xhr) {
-  xhr.setRequestHeader("X-Mashape-Authorization", "0Pj9sD3WmEmshc4ksOMtS4dyEOGIp1aNbr3jsnrxphIFkVMYVh");
+  if (!firstgif) {
+    $('#gif').append(`<img src="obama.gif" />`)
+  }else{
+    store.gifs[store.gifs.length-1].url = firstgif.images.original.url //stores gif url
+    $('#gif').append(`<img src="${firstgif.images.original.url}" />`)//shows gif
   }
-  }).done(function (response) {
-    displayRhyme(response)
-  })
 }
 
-function displayRhyme(response) {
-  debugger
-  // let rhyme =
-}
 
-$('.button').raptorize();
+$('.raptor').raptorize();
 
 $( "#clickme" ).click(function() {
   $( ".container" ).animate({
@@ -87,5 +126,8 @@ $( "#clickme" ).click(function() {
     left: "+=50",
     width: "toggle"
   }, 1000, function() {
+    setTimeout(function () {
+      document.location.reload(false)
+    }, 1500);
   });
 });
