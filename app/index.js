@@ -20,28 +20,33 @@ function newForm() {
     $('form').hide()
     $('#clickme').show()
     $('#anotherGif').show()
+    debugger
     createWord($('#word').val())
     createGif($('#word').val())
   })
 }
 
-function anotherForm() {
-  // debugger
-  $('form #word').val("")
-  // debugger
-  $('#search').empty()
-  $('#definition').empty()
-  $('#gif').empty()
-  $('form').show()
-  $('#clickme').hide()
-  // newForm()
-  $('form').on('submit', function(){
-    event.preventDefault()
-    createWord($('#word').val())
-    createGif($('#word').val())
-    // createDefinition($('#word').val())
-  })
-}
+// function anotherForm() {
+//   // debugger
+//   $('form #word').empty()
+//   // debugger
+//   $('#search').empty()
+//   $('#definition').empty()
+//   $('#gif').empty()
+//   $('form').show()
+//   $('#clickme').hide()
+//   // newForm()
+//   $('form').on('submit', function(){
+//     event.preventDefault()
+//     $('form').hide()
+//     $('#clickme').show()
+//     $('#anotherGif').show()
+//     debugger
+//     createWord($('#word').val())
+//     createGif($('#word').val())
+//     // createDefinition($('#word').val())
+//   })
+// }
 
 $(function (){
   $('#random').on('click', function(){
@@ -79,27 +84,27 @@ $(function (){
 // }
 
 function displayWord(word) {
-  $('#search').append(`${word}`)
+  $('#search').append(word)
 }
 
-function getDefinition(word) {
-  // debugger
-  $.ajax({
-  method: "GET",
-  url: `https://mashape-community-urban-dictionary.p.mashape.com/define?term=${word.word}`,
-  beforeSend: function(xhr) {
-  xhr.setRequestHeader("X-Mashape-Authorization", "0Pj9sD3WmEmshc4ksOMtS4dyEOGIp1aNbr3jsnrxphIFkVMYVh");
-  }
-  }).done(function (response) {
-    debugger
-    if (response.result_type === "no_results") { displayDefinition(response)} else {
-      let definition = new Definition(response.list[0].definition)
-      word.definition = definition
-      word.example = response.list[0].example
-      displayDefinition(response)
-    }
-  })
-}
+// function getDefinition(word) {
+//   // debugger
+//   $.ajax({
+//   method: "GET",
+//   url: `https://mashape-community-urban-dictionary.p.mashape.com/define?term=${word.word}`,
+//   beforeSend: function(xhr) {
+//   xhr.setRequestHeader("X-Mashape-Authorization", "0Pj9sD3WmEmshc4ksOMtS4dyEOGIp1aNbr3jsnrxphIFkVMYVh");
+//   }
+//   }).done(function (response) {
+//     debugger
+//     if (response.result_type === "no_results") { displayDefinition(response)} else {
+//       let definition = new Definition(response.list[0].definition)
+//       word.definition = definition
+//       word.example = response.list[0].example
+//       displayDefinition(response)
+//     }
+//   })
+// }
 
 function displayDefinition(response) {
   let firstdef = response.list[0]
@@ -128,19 +133,19 @@ $( "#clickme" ).click(function() {
     left: "+=50",
     width: "toggle"
   }, 1000, function() {
-    // setTimeout(function () {
-    //   document.location.reload(false)
-    // }, 1500);
-    anotherForm()
+    setTimeout(function () {
+      document.location.reload(false)
+    }, 1500);
+    // anotherForm()
   });
 });
 
-function nextGif(word) {
-  $.ajax({
-  method: "GET",
-  url: `http://api.giphy.com/v1/gifs/search?q=${word}&api_key=dc6zaTOxFJmzC`,
-  }).done(function (response) {
-    displayGif(response)
-    $('#gif').append(`<button id="anotherGif" onclick="nextGif('${word}')">and another!</button>`)
-  })
-}
+// function nextGif(word) {
+//   $.ajax({
+//   method: "GET",
+//   url: `http://api.giphy.com/v1/gifs/search?q=${word}&api_key=dc6zaTOxFJmzC`,
+//   }).done(function (response) {
+//     displayGif(response)
+//     $('#gif').append(`<button id="anotherGif" onclick="nextGif('${word}')">and another!</button>`)
+//   })
+// }
