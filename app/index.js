@@ -19,17 +19,17 @@ function newForm() {
     event.preventDefault()
     $('form').hide()
     $('#clickme').show()
-    $('#anotherGif').show()
-    debugger
+    // $('#anotherGif').show()
+    //debugger
     createWord($('#word').val())
     createGif($('#word').val())
   })
 }
 
 // function anotherForm() {
-//   // debugger
+//   // //debugger
 //   $('form #word').empty()
-//   // debugger
+//   // //debugger
 //   $('#search').empty()
 //   $('#definition').empty()
 //   $('#gif').empty()
@@ -41,7 +41,7 @@ function newForm() {
 //     $('form').hide()
 //     $('#clickme').show()
 //     $('#anotherGif').show()
-//     debugger
+//     //debugger
 //     createWord($('#word').val())
 //     createGif($('#word').val())
 //     // createDefinition($('#word').val())
@@ -79,7 +79,7 @@ $(function (){
 //   }).done(function (response) {
 //     createWord(response.Word)
 //     createGif(response.Word)
-//     // debugger
+//     // //debugger
 //   })
 // }
 
@@ -88,7 +88,7 @@ function displayWord(word) {
 }
 
 // function getDefinition(word) {
-//   // debugger
+//   // //debugger
 //   $.ajax({
 //   method: "GET",
 //   url: `https://mashape-community-urban-dictionary.p.mashape.com/define?term=${word.word}`,
@@ -96,7 +96,7 @@ function displayWord(word) {
 //   xhr.setRequestHeader("X-Mashape-Authorization", "0Pj9sD3WmEmshc4ksOMtS4dyEOGIp1aNbr3jsnrxphIFkVMYVh");
 //   }
 //   }).done(function (response) {
-//     debugger
+//     //debugger
 //     if (response.result_type === "no_results") { displayDefinition(response)} else {
 //       let definition = new Definition(response.list[0].definition)
 //       word.definition = definition
@@ -123,6 +123,18 @@ function displayGif(response) {
     store.gifs[store.gifs.length-1].url = firstgif.images.original.url //stores gif url
     $('#gif').append(`<img src="${firstgif.images.original.url}" />`)//shows gif
   }
+}
+
+function displayRandomGif(response) {
+  let responseLength = response.data.length
+  let randgif = response.data[Math.floor(Math.random()*responseLength)]
+  // if (!randgif) {
+  //   $('#gif').empty().append(`<img src="giphy.gif" />`)
+  // }else{
+    store.gifs[store.gifs.length-1].url = randgif.images.original.url //stores gif url
+    $('#gif').empty().append(`<img src="${randgif.images.original.url}" />`)//shows gif
+    $('#gif').append(`<button id="anotherGif" onclick="nextGif('${word}')">and another!</button>`)
+
 }
 
 $('.raptor').raptorize();

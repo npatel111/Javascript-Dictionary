@@ -1,5 +1,5 @@
 function getDefinition(word) {
-  debugger
+  ////debugger
   $.ajax({
   method: "GET",
   url: `https://mashape-community-urban-dictionary.p.mashape.com/define?term=${word.word}`,
