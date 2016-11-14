@@ -4,8 +4,6 @@ const Definition = (function() {
     constructor(definition){
       this.id = ++id
       this.definition = definition
-      // this.word = word
-      // this.wordId = wordId
       store.definitions = [...store.definitions, this]
     }
   }

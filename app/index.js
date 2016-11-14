@@ -118,7 +118,7 @@ function displayDefinition(response) {
 function displayGif(response) {
   let firstgif = response.data[0]
   if (!firstgif) {
-    $('#gif').append(`<img src="giphy.gif" />`)
+    $('#gif').append(`<img src="images/giphy.gif" />`)
   }else{
     store.gifs[store.gifs.length-1].url = firstgif.images.original.url //stores gif url
     $('#gif').append(`<img src="${firstgif.images.original.url}" />`)//shows gif
@@ -128,9 +128,6 @@ function displayGif(response) {
 function displayRandomGif(response) {
   let responseLength = response.data.length
   let randgif = response.data[Math.floor(Math.random()*responseLength)]
-  // if (!randgif) {
-  //   $('#gif').empty().append(`<img src="giphy.gif" />`)
-  // }else{
     store.gifs[store.gifs.length-1].url = randgif.images.original.url //stores gif url
     $('#gif').empty().append(`<img src="${randgif.images.original.url}" />`)//shows gif
     $('#gif').append(`<button id="anotherGif" onclick="nextGif('${word}')">and another!</button>`)
