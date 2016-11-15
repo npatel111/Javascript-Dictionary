@@ -18,6 +18,8 @@ form {
   height: 500px;
   padding-left: 135px;
   clear:both;
+  /*padding-top: 100px;*/
+
 }
 
 #definition {
@@ -26,7 +28,7 @@ form {
   text-align: left;
   padding-left: 70px;
   clear: both;
-  top: auto;
+  margin-top: 0;
 }
 
 #search {
@@ -48,6 +50,7 @@ form {
   float: right;
   line-height: 500px;
   padding-right: 150px;
+  padding-top: 140px;
 }
 
 #gif {
@@ -117,16 +120,16 @@ ul {
 
 .raptor {
   background: url(images/preggo-dino.gif) no-repeat;
-  width: 120px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   border: 0px solid;
-  transform: scale(.5);
+  transform: scale(.45);
 }
 
 .raptor:hover {
   border: 0px solid;
   background-color: rgba(51, 153, 51, 0.3);
-  border-radius: 20px;
+  border-radius: 200px;
 }
 
 #gifbutton {

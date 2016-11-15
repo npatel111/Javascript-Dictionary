@@ -30,7 +30,7 @@ function displayWord(word) {
 function displayDefinition(response) {
   let firstdef = response.list[0]
   if (!firstdef){
-    $('#definition').append("No definition, but here are some puppies to help: ")
+    $('#definition').append("No definition, but here's a gif to help cope: ")
   } else {
     $('#definition').append(`${firstdef.definition}<br><br>${firstdef.example}<br><br>`)
   }
