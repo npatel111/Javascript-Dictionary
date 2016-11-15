@@ -11,6 +11,6 @@ function getDefinition(word) {
       word.definition = definition
       word.example = response.list[0].example
       displayDefinition(response)
-    }
-  })
+  }
+})
 }
