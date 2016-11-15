@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/npatel111/Javascript-Dictionary#readme",
   "scripts": {
-    "start":"node index.js"
+    "start":"index.js"
   }
 
 
