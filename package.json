@@ -1,3 +1,5 @@
+
+
 {
   "name": "giphtionary",
   "version": "6.5.0",
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/npatel111/Javascript-Dictionary/issues"
   },
-  "homepage": "https://github.com/npatel111/Javascript-Dictionary#readme"
+  "homepage": "https://github.com/npatel111/Javascript-Dictionary#readme",
+  "scripts": {
+    "start":"node index.js"
+  }
+
+
+
 }
