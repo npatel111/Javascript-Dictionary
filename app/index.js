@@ -53,14 +53,6 @@ function displayGif(response) {
   }
 }
 
-// function displayRandomGif(response) {
-//   let responseLength = response.data.length
-//   let randgif = response.data[Math.floor(Math.random()*responseLength)]
-//     store.gifs[store.gifs.length-1].url = randgif.images.original.url //stores gif url
-//     $('#gif').empty().append(`<img src="${randgif.images.original.url}" />`)//shows gif
-//     $('#gif').append(`<button id="anotherGif" onclick="nextGif('${word}')">and another!</button>`)
-// }
-
 $('.raptor').raptorize();
 
 $( "#clickme" ).click(function() {

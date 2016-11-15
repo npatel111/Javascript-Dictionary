@@ -12,30 +12,20 @@ form {
   font-family: 'Bungee Shade', cursive;
 }
 
-
-
 #display {
   position: absolute;
   width: 40%;
   height: 500px;
-  /*line-height: 500px;*/
-  /*padding: 40px;*/
-  /*float: left;*/
   padding-left: 135px;
-  padding-top: 100px;
+  padding-top: 30px;
   clear:both;
-
 }
 
 #definition {
-  /*position: relative;*/
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
-  /*float: right;
-  right: 0;*/
   text-align: left;
   padding-left: 70px;
-  /*vertical-align: middle;*/
   clear: both;
   top: auto;
 }
@@ -45,9 +35,7 @@ form {
   position: relative;
   font-size:100px;
   font-family: 'Bungee Shade', cursive;
-  /*float: right;*/
   text-align: right;
-  /*align-items: flex-end;*/
   padding-left: 10px;
   right: 0;
   width: 33.33%;
@@ -65,12 +53,11 @@ form {
 }
 
 #gif {
-  padding-top: 100px;
+  padding-top: 40px;
   vertical-align: middle;
   float: right;
   transform: translateY(0%, -50%);
 }
-
 
 img {
   float: right;
@@ -131,31 +118,16 @@ ul {
 }
 
 .raptor {
-  color: white;
-  font-size: 20px;
-  font-family: 'Quicksand', sans-serif;
-  text-decoration: none;
-  border: 2px solid white;
-  border-radius: 20px;
-  transition-duration: .2s;
-  -webkit-transition-duration: .2s;
-  -moz-transition-duration: .2s;
-  background-color: green;
-  padding: 4px 30px;
+  background: url(images/dino.gif) no-repeat;
+  width: 50px;
+  height: 50px;
+  border: 0px solid;
 }
 
 .raptor:hover {
-  color: green;
-  background-color: white;
-  transition-duration: .2s;
-  -webkit-transition-duration: .2s;
-  -moz-transition-duration: .2s;
-}
-
-#nav {
-  float: left;
-  padding-left: 20px;
-  position: relative;
+  border: 0px solid;
+  background-color: rgba(51, 153, 51, 0.3);
+  border-radius: 20px;
 }
 
 #gifbutton {
@@ -167,8 +139,6 @@ ul {
 
 #anotherGif {
   color: white;
-  /*float: bottom;
-  padding-top: 800px;*/
   font-size: 20px;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;

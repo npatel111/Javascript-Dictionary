@@ -8,6 +8,5 @@ function randomWord() {
   }).done(function (response) {
     createWord(response.Word)
     createGif(response.Word)
-    // //debugger
   })
 }
