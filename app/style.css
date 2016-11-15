@@ -1,0 +1,166 @@
+form {
+  text-align: center;
+}
+
+.input {
+  padding-top: 200px;
+  border: 0px solid;
+  height: 120px;
+  width: 1200px;
+  font-size:120px;
+  text-align: center;
+  font-family: 'Bungee Shade', cursive;
+}
+
+#display {
+  position: absolute;
+  width: 40%;
+  height: 500px;
+  padding-left: 135px;
+  clear:both;
+  /*padding-top: 100px;*/
+
+}
+
+#definition {
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: left;
+  padding-left: 70px;
+  clear: both;
+  margin-top: 0;
+}
+
+#search {
+  position: absolute;
+  position: relative;
+  font-size:100px;
+  font-family: 'Bungee Shade', cursive;
+  text-align: right;
+  padding-left: 10px;
+  right: 0;
+  width: 33.33%;
+  vertical-align: middle;
+  clear: both;
+}
+
+#gifcontainer {
+  width: 66.66%;
+  height: 500px;
+  float: right;
+  line-height: 500px;
+  padding-right: 150px;
+  padding-top: 140px;
+}
+
+#gif {
+  padding-top: 40px;
+  vertical-align: middle;
+  float: right;
+  transform: translateY(0%, -50%);
+}
+
+img {
+  float: right;
+  width:  500px;
+  max-height: 475px;
+  border: 0px solid;
+  border-color: #454545;
+  border-radius: 25px;
+  vertical-align: middle;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.submit {
+  color: black;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 20px;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  background-color: white;
+  padding: 4px 30px;
+}
+
+.submit:hover {
+  color: white;
+  background-color: black;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+}
+
+.button {
+  color: white;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 20px;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  background-color: black;
+  padding: 6px 60px;
+}
+
+.button:hover {
+  color: black;
+  background-color: white;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+}
+
+.raptor {
+  background: url(images/preggo-dino.gif) no-repeat;
+  width: 150px;
+  height: 150px;
+  border: 0px solid;
+  transform: scale(.45);
+}
+
+.raptor:hover {
+  border: 0px solid;
+  background-color: rgba(51, 153, 51, 0.3);
+  border-radius: 200px;
+}
+
+#gifbutton {
+  float: right;
+  vertical-align: bottom;
+  transform: translate(-75%, -150%);
+  position: relative;
+}
+
+#anotherGif {
+  color: white;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 20px;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  background-color: black;
+  padding: 4px 30px;
+}
+
+#anotherGif:hover {
+  color: black;
+  background-color: white;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+}
+
+*:focus {
+  outline: none;
+}
