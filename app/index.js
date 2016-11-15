@@ -1,5 +1,4 @@
-
-$(document).ready(function() { // on document ready
+$(document).ready(function() {
   newForm()
   $('#clickme').hide()
   $('#anotherGif').hide()
@@ -32,22 +31,20 @@ function displayDefinition(response) {
   let firstdef = response.list[0]
   if (!firstdef){
     $('#definition').append("No definition, but here are some puppies to help: ")
-  }else {
+  } else {
     $('#definition').append(`${firstdef.definition}<br><br>${firstdef.example}<br><br>`)
   }
 }
 
 function displayGif(response) {
-  debugger
   let firstgif = response.data[0]
   if (!firstgif) {
     getGif("puppies")
-    // $('#gif').append(`<img src="images/giphy.gif" />`)
-  }else{
+  } else {
     let responseLength = response.data.length
     let randgif = response.data[Math.floor(Math.random()*responseLength)]
-      store.gifs[store.gifs.length-1].url = randgif.images.original.url //stores gif url
-      $('#gif').empty().append(`<img src="${randgif.images.original.url}" /><br><div id="gifbutton"><button id="anotherGif" onclick="getGif('${store.gifs[store.gifs.length-1].word}')">and another!</button></div>`)//
+    store.gifs[store.gifs.length-1].url = randgif.images.original.url
+    $('#gif').empty().append(`<img src="${randgif.images.original.url}" /><br><div id="gifbutton"><button id="anotherGif" onclick="getGif('${store.gifs[store.gifs.length-1].word}')">and another!</button></div>`)
   }
 }
 

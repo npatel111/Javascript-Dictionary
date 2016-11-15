@@ -31,7 +31,7 @@ form {
 }
 
 #search {
-  position: absolute; /*would right align it */
+  position: absolute;
   position: relative;
   font-size:100px;
   font-family: 'Bungee Shade', cursive;
@@ -127,7 +127,6 @@ ul {
 .raptor:hover {
   border: 0px solid;
   background-color: rgba(255, 153, 0, 0.3);
-  /*background-color: rgba(51, 153, 51, 0.3);*/
   border-radius: 20px;
 }
 
