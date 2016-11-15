@@ -17,7 +17,6 @@ form {
   width: 40%;
   height: 500px;
   padding-left: 135px;
-  padding-top: 30px;
   clear:both;
 }
 
@@ -49,7 +48,6 @@ form {
   float: right;
   line-height: 500px;
   padding-right: 150px;
-  padding-top: 50px;
 }
 
 #gif {
@@ -62,7 +60,7 @@ form {
 img {
   float: right;
   width:  500px;
-  max-height: 525px;
+  max-height: 475px;
   border: 0px solid;
   border-color: #454545;
   border-radius: 25px;
@@ -118,15 +116,16 @@ ul {
 }
 
 .raptor {
-  background: url(images/dino.gif) no-repeat;
-  width: 50px;
-  height: 50px;
+  background: url(images/preggo-dino.gif) no-repeat;
+  width: 120px;
+  height: 130px;
   border: 0px solid;
+  transform: scale(.5);
 }
 
 .raptor:hover {
   border: 0px solid;
-  background-color: rgba(255, 153, 0, 0.3);
+  background-color: rgba(51, 153, 51, 0.3);
   border-radius: 20px;
 }
 
