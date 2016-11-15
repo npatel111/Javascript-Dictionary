@@ -16,12 +16,12 @@ form {
 
 #display {
   position: absolute;
-  width: 33.33%;
+  width: 40%;
   height: 500px;
   /*line-height: 500px;*/
   /*padding: 40px;*/
   /*float: left;*/
-  padding-left: 150px;
+  padding-left: 135px;
   padding-top: 100px;
   clear:both;
 
@@ -31,9 +31,10 @@ form {
   /*position: relative;*/
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
-  float: right;
-  right: 0;
-  text-align: right;
+  /*float: right;
+  right: 0;*/
+  text-align: left;
+  padding-left: 70px;
   /*vertical-align: middle;*/
   clear: both;
   top: auto;
@@ -47,7 +48,7 @@ form {
   /*float: right;*/
   text-align: right;
   /*align-items: flex-end;*/
-  padding-left: 40px;
+  padding-left: 10px;
   right: 0;
   width: 33.33%;
   vertical-align: middle;
@@ -59,48 +60,26 @@ form {
   height: 500px;
   float: right;
   line-height: 500px;
-  padding-right: 40px;
+  padding-right: 150px;
+  padding-top: 50px;
 }
 
 #gif {
-  /*padding-right: 40px;*/
   padding-top: 100px;
   vertical-align: middle;
-  /*position: absolute;*/
-  /*top: 50%;*/
-  /*transform: translateX(30%);*/
-  /*display: inline-block;*/
-  /*padding-top: 100px*/
-  /*width: 70%;*/
   float: right;
-  /*vertical-align: middle;*/
-  /*margin-left: 50px;*/
-  /*transform: translate(-10%, 50%);*/
-/*margin-top: auto;*/
-/*padding-bottom: 80%;*/
-/*position: relative;
-top: 50%;*/
-transform: translateY(0%, -50%);
+  transform: translateY(0%, -50%);
 }
 
 
 img {
-  /*position: absolute;*/
-  /*transform: translate(-10%, -50%);*/
   float: right;
   width:  500px;
   max-height: 525px;
   border: 0px solid;
   border-color: #454545;
   border-radius: 25px;
-
   vertical-align: middle;
-  /*padding-bottom: 40%;*/
-
-
-
-  /*vertical-align: middle;*/
-  /*align-self: center;*/
 }
 
 ul {
@@ -174,8 +153,16 @@ ul {
 }
 
 #nav {
+  float: left;
+  padding-left: 20px;
+  position: relative;
+}
+
+#gifbutton {
   float: right;
-  padding-right: 20px;
+  vertical-align: bottom;
+  transform: translate(-75%, -150%);
+  position: relative;
 }
 
 #anotherGif {
@@ -190,12 +177,12 @@ ul {
   transition-duration: .2s;
   -webkit-transition-duration: .2s;
   -moz-transition-duration: .2s;
-  background-color: green;
+  background-color: black;
   padding: 4px 30px;
 }
 
 #anotherGif:hover {
-  color: green;
+  color: black;
   background-color: white;
   transition-duration: .2s;
   -webkit-transition-duration: .2s;

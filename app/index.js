@@ -25,7 +25,7 @@ $(function (){
 })
 
 function displayWord(word) {
-  $('#search').append(word)
+  $('#search').append(`${word}<br>`)
 }
 
 function displayDefinition(response) {
@@ -33,7 +33,7 @@ function displayDefinition(response) {
   if (!firstdef){
     $('#definition').append("")
   }else {
-    $('#definition').append(`${firstdef.definition}<br><br>${firstdef.example}`)
+    $('#definition').append(`${firstdef.definition}<br><br>${firstdef.example}<br><br>`)
   }
 }
 
@@ -46,8 +46,8 @@ function displayGif(response) {
     let responseLength = response.data.length
     let randgif = response.data[Math.floor(Math.random()*responseLength)]
       store.gifs[store.gifs.length-1].url = randgif.images.original.url //stores gif url
-      $('#gif').empty().append(`<img src="${randgif.images.original.url}" />`)//shows gif
-      $('#gifbutton').empty().append(`<button id="anotherGif" onclick="getGif('${store.gifs[store.gifs.length-1].word}')">and another!</button>`)
+      $('#gif').empty().append(`<img src="${randgif.images.original.url}" /><br><div id="gifbutton"><button id="anotherGif" onclick="getGif('${store.gifs[store.gifs.length-1].word}')">and another!</button></div>`)//shows gif
+      // $('#gif').append(`<button id="anotherGif" onclick="getGif('${store.gifs[store.gifs.length-1].word}')">and another!</button>`)
     // store.gifs[store.gifs.length-1].url = firstgif.images.original.url //stores gif url
     // $('#gif').append(`<img src="${firstgif.images.original.url}" />`)//shows gif
   }
