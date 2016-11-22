@@ -127,6 +127,7 @@ ul {
 }
 
 .raptor:hover {
+  text-blink: 'hello';
   border: 0px solid;
   background-color: rgba(51, 153, 51, 0.3);
   border-radius: 200px;
@@ -164,3 +165,7 @@ ul {
 *:focus {
   outline: none;
 }
+
+
+
+

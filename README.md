@@ -3,7 +3,7 @@
 Search for a word and get back a semi-useful definition along with a gif (pronounced however you like).
 Click "I D K" if you're unsure about life and/or what word to search.
 
-I'll leave the raptor button up to you - (for the best experience, maximize your volume).
+We'll leave the raptor button up to you - (for the best experience, maximize your volume).
 
 Raptor feature thanks to:
   jQuery Raptorize Plugin 1.0
