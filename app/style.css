@@ -12,6 +12,7 @@ form {
   font-family: 'Bungee Shade', cursive;
 }
 
+
 #display {
   /*position: absolute;*/
   width: 40%;
@@ -19,7 +20,6 @@ form {
   padding-left: 135px;
   clear:both;
   /*padding-top: 100px;*/
-
 }
 
 #definition {
@@ -73,6 +73,11 @@ img {
 ul {
   list-style-type: none;
 }
+
+@media (min-width: 1000px) {
+  button {font-size: 50px;}
+}
+
 
 .submit {
   color: black;
