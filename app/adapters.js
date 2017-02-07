@@ -16,3 +16,24 @@ function getDefinition(input) {
     }
   })
 }
+
+function getGif(word) {
+  $gif = word
+  $.ajax({
+    method: "GET",
+    url: `http://api.giphy.com/v1/gifs/search?q=${word}&api_key=dc6zaTOxFJmzC`,
+  }).done(function (response) {
+    displayGif(response)
+  })
+}
+
+function randomWord() {
+  $.ajax({
+    type: "GET",
+    url: 'http://www.setgetgo.com/randomword/get.php?len=6',
+    dataType: "jsonp"
+  }).done(function (response) {
+    createWord(response.Word)
+    createGif(response.Word)
+  })
+}

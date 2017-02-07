@@ -1,0 +1,109 @@
+body, html {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  text-align: center;
+}
+
+form input:first-child {
+  border: 0px solid;
+  padding-top: 15%;
+  width: 75%;
+  font-size: 7.5em;
+  text-align: center;
+  font-family: 'Bungee Shade', cursive;
+  margin-bottom: 1%;
+}
+
+.button {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3em;
+  text-decoration: none;
+  width: 10%;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: .25em 2em;
+}
+
+.button:hover {
+  transform: scale(2);
+}
+
+.whiteButton {
+  color: white;
+  border: 2px solid white;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  background-color: black;
+}
+
+.blackButton {
+  color: black;
+  border: 2px solid black;
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  background-color: white;
+}
+
+.secondPage {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20%;
+}
+
+.secondPage:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.sections {
+  display: inline-block;
+  width: calc((100% - 20px*4)/2);
+  margin-left: 20px;
+  margin-right: 20px;
+  float: left;
+}
+
+.definition {
+  text-align: right;
+}
+
+img {
+  width: 175%;
+  height: 175%;
+}
+
+/* media queries */
+@media min-width(300) {
+
+}
