@@ -43,3 +43,17 @@ function displayDefinition(response) {
     $('.definition').append(`<p>${def.definition}</p><br><p>${def.example}</p>`)
   }
 }
+
+$('.raptor').raptorize();
+
+$( "#clickme" ).click(function() {
+  $( ".container" ).animate({
+    opacity: 0.25,
+    left: "+=50",
+    width: "toggle"
+  }, 2000, function() {
+    setTimeout(function () {
+      document.location.reload(false)
+    }, 1000);
+  });
+});
