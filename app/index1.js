@@ -6,16 +6,22 @@ function newForm() {
   $('form').on('submit', function(e){
     event.preventDefault()
     let word = e.target.children[0].value
-    $('form').hide()
-    $('.secondPage').show()
+    $('.first-page').hide()
+    $('.second-page').show()
     getDefinition(word)
     getGif(word)
+    $('.definition').append(`<p>${word}</p>`)
   })
 }
 
-function displayWord(word) {
-  $('.search').append(`${word}<br>`)
-}
+$(function (){
+  $('.random').on('click', function(){
+    event.preventDefault()
+    $('.first-page').hide()
+    $('.second-page').show()
+    randomWord()
+  })
+})
 
 function displayGif(response) {
   let firstgif = response.data[0]
@@ -34,6 +40,6 @@ function displayDefinition(response) {
   if (!def){
     $('.definition').append("No definition, but here's a gif to help cope: ")
   } else {
-    $('.definition').append(`<p>${def.definition}</p><p>${def.example}</p>`)
+    $('.definition').append(`<p>${def.definition}</p><br><p>${def.example}</p>`)
   }
 }

@@ -10,8 +10,6 @@ function getDefinition(input) {
       displayDefinition(response)
     }
     else {
-      let definition = response.list[0].definition
-      let example = response.list[0].example
       displayDefinition(response)
     }
   })
@@ -33,7 +31,9 @@ function randomWord() {
     url: 'http://www.setgetgo.com/randomword/get.php?len=6',
     dataType: "jsonp"
   }).done(function (response) {
-    createWord(response.Word)
-    createGif(response.Word)
+    let word = response.Word
+    getDefinition(word)
+    getGif(word)
+    $('.definition').append(`<p>${word}</p>`)
   })
 }
