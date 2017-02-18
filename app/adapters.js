@@ -31,7 +31,7 @@ function randomWord() {
     url: 'http://www.setgetgo.com/randomword/get.php?len=6',
     dataType: "jsonp"
   }).done(function (response) {
-    let word = response.Word
+    var word = response.Word
     getDefinition(word)
     getGif(word)
     $('.definition').append(`<p>${word}</p>`)
