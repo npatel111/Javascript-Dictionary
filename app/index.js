@@ -4,11 +4,11 @@ $(document).ready(function() {
 })
 
 function newForm() {
-  $('form').on('submit', function(e){
+  $('form').on('submit', function(event){
     event.preventDefault()
     $('.first-page').hide()
     $('.raptor-nav').show()
-    let word = e.target.children[0].value
+    let word = event.target.children[0].value
     if (word === '') {
       word = 'puppies'
     }
@@ -19,7 +19,7 @@ function newForm() {
 }
 
 $(function (){
-  $('.random').on('click', function(){
+  $('.random').on('click', function(event){
     event.preventDefault()
     $('.first-page').hide()
     $('.raptor-nav').show()
