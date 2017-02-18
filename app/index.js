@@ -8,7 +8,7 @@ function newForm() {
     event.preventDefault()
     $('.first-page').hide()
     $('.raptor-nav').show()
-    let word = event.target.children[0].value
+    var word = event.target.children[0].value
     if (word === '') {
       word = 'puppies'
     }
@@ -28,19 +28,19 @@ $(function (){
 })
 
 function displayGif(response) {
-  let firstgif = response.data[0]
+  var firstgif = response.data[0]
   if (!firstgif) {
     getGif("puppies")
   }
   else {
-    let responseLength = response.data.length
-    let randgif = response.data[Math.floor(Math.random()*responseLength)]
+    var responseLength = response.data.length
+    var randgif = response.data[Math.floor(Math.random()*responseLength)]
     $('.gif').empty().append(`<button id="anotherGif" onclick="getGif('${$gif}')">and another!</button><img src="${randgif.images.original.url}"/>`)
   }
 }
 
 function displayDefinition(response) {
-  let def = response.list[0]
+  var def = response.list[0]
   if (!def){
     $('.definition').append("No definition, but here's a gif to help cope: ")
   }
