@@ -371,3 +371,41 @@ img {
     height: 120px;
   }
 }
+
+/*large screens*/
+@media screen
+  and (min-device-width: 2560px)
+  /*and (max-device-width: 1440px)*/
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+  .container {
+    max-width: 100%;
+    padding: 0 100px;
+  }
+  form input:first-child {
+    font-size: 300px;
+  }
+  .button {
+    font-size: 30px;
+  }
+  .definition p:first-child {
+    font-size: 300px;
+  }
+  .definition p {
+    font-size: 25px;
+  }
+  .definition {
+    width: 53%;
+  }
+  .gif {
+    width: 45%;
+    padding-top: 50px;
+  }
+  .gif > button {
+    width: 700px;
+  }
+  img {
+    width: 700px;
+    height: 700px;
+  }
+}

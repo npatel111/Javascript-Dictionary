@@ -6,9 +6,12 @@ $(document).ready(function() {
 function newForm() {
   $('form').on('submit', function(e){
     event.preventDefault()
-    let word = e.target.children[0].value
     $('.first-page').hide()
     $('.raptor-nav').show()
+    let word = e.target.children[0].value
+    if (word === '') {
+      word = 'puppies'
+    }
     getDefinition(word)
     getGif(word)
     $('.definition').append(`<p>${word}</p>`)
