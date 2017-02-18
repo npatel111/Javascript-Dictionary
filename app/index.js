@@ -43,7 +43,8 @@ function displayDefinition(response) {
   let def = response.list[0]
   if (!def){
     $('.definition').append("No definition, but here's a gif to help cope: ")
-  } else {
+  }
+  else {
     $('.definition').append(`<p>${def.definition}</p><br><p>${def.example}</p>`)
   }
 }

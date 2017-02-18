@@ -1,0 +1,22 @@
+{
+  "name": "giphtionary",
+  "version": "6.5.0",
+  "description": "Search for a word and get back a semi-useful definition along with a gif (pronounced however you like). Click \"I D K\" if you're unsure about life and/or what word to search.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npatel111/Javascript-Dictionary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npatel111/Javascript-Dictionary/issues"
+  },
+  "homepage": "https://github.com/npatel111/Javascript-Dictionary#readme",
+  "scripts": {
+    "start":""
+  }
+}
